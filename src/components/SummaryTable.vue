@@ -71,7 +71,9 @@
   </v-table>
 
   <PopupMenu
+    :items="popupMenuitems"
     :menuActivator = "menuActivator"
+    :selectedMenuItem = "selectedMenuItem"
   />
 </template>
 
@@ -82,6 +84,13 @@ export default {
   name: 'SummaryTable',
   components: {
     PopupMenu,
+  },
+
+  props: {
+    openWindowDialog: {
+      type: Function,
+      default: null,
+    },
   },
 
   data() {
@@ -128,18 +137,22 @@ export default {
           calories: 518,
         },
       ],
-      items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' },
+      popupMenuitems: [
+        { title: 'Редактировать' },
+        { title: 'Предмет договора' },
+        { title: 'Шаблон договора' },
+        { title: 'Счёт' },
+        { title: 'Акт' },
       ],
       menuActivator: null,
     };
   },
 
   methods: {
-
+    selectedMenuItem(item) {
+      console.log(item);
+      this.openWindowDialog();
+    },
   },
 
 };

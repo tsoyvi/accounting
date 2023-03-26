@@ -7,7 +7,8 @@
           :key="index"
           :value="index"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title
+            @click="selectedMenuItem(item)">{{ item.title }}</v-list-item-title>
           <v-divider></v-divider>
         </v-list-item>
       </v-list>
@@ -22,18 +23,24 @@ export default {
       type: String,
       default: null,
     },
+
+    selectedMenuItem: {
+      type: Function,
+      default: null,
+    },
+    items: {
+      type: Array,
+      default: null,
+    },
+
   },
 
   data() {
     return {
-      items: [
-        { title: 'Редактировать' },
-        { title: 'Предмет договора' },
-        { title: 'Шаблон договора' },
-        { title: 'Счёт' },
-        { title: 'Акт' },
-      ],
     };
+  },
+
+  methods: {
   },
 
 };
