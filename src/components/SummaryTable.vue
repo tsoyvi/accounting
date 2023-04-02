@@ -138,11 +138,11 @@ export default {
         },
       ],
       popupMenuitems: [
-        { title: 'Редактировать' },
-        { title: 'Предмет договора' },
-        { title: 'Шаблон договора' },
-        { title: 'Счёт' },
-        { title: 'Акт' },
+        { id: '0', title: 'Редактировать', module: 'InitialDataSlot' },
+        { id: '1', title: 'Предмет договора', module: 'SubjectContractSlot' },
+        { id: '2', title: 'Шаблон договора', module: '' },
+        { id: '3', title: 'Счёт', module: '' },
+        { id: '4', title: 'Акт', module: '' },
       ],
       menuActivator: null,
     };
@@ -150,8 +150,7 @@ export default {
 
   methods: {
     selectedMenuItem(item) {
-      console.log(item);
-      this.openWindowDialog();
+      this.openWindowDialog(item);
     },
   },
 

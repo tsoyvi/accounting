@@ -26,6 +26,7 @@ import { defineComponent } from 'vue';
 import SummaryTable from '../components/SummaryTable.vue';
 import ModalWindow from '../components/ModalWindow.vue';
 import InitialDataSlot from '../components/modalWindowContents/InitialDataSlot.vue';
+import SubjectContractSlot from '../components/modalWindowContents/SubjectContractSlot.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -37,11 +38,13 @@ export default defineComponent({
     SummaryTable,
     ModalWindow,
     InitialDataSlot,
+    SubjectContractSlot,
   },
 
   methods: {
-    openWindow() {
-      this.currentContentWindow = 'InitialDataSlot';
+    openWindow(selectedPopupItem) {
+      console.log(selectedPopupItem);
+      this.currentContentWindow = selectedPopupItem.module;
       this.$refs.ModalWindow.openWindow();
     },
   },

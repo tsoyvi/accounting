@@ -1,5 +1,7 @@
 import { createStore } from 'vuex';
 
+import constants from './constants';
+
 export default createStore({
   state: {
   },
@@ -10,5 +12,6 @@ export default createStore({
   actions: {
   },
   modules: {
+    constants,
   },
 });

@@ -1,23 +1,52 @@
 <template>
     <v-row>
         <v-col cols="2">
-            <v-text-field label="№ Договора" required @click="test()"></v-text-field>
+            <v-text-field
+                label="№ Договора"
+                required
+                variant="underlined"
+                density="compact"
+                @click="test()"
+            ></v-text-field>
         </v-col>
 
         <v-col cols="3">
-            <v-text-field label="Дата" hint="" persistent-hint required></v-text-field>
+            <v-text-field
+                label="Дата"
+                hint=""
+                persistent-hint
+                required
+                variant="underlined"
+                density="compact"
+            ></v-text-field>
         </v-col>
 
         <v-col cols="2">
-            <v-text-field label="№ Заявки" required @click="test()"></v-text-field>
+            <v-text-field
+                label="№ Заявки"
+                required @click="test()"
+                variant="underlined"
+                density="compact"
+            ></v-text-field>
         </v-col>
 
         <v-col cols="3">
-            <v-text-field label="Дата Заявки" required @click="test()"></v-text-field>
+            <v-text-field
+                label="Дата Заявки"
+                variant="underlined"
+                density="compact"
+                required @click="test()"
+            ></v-text-field>
         </v-col>
 
         <v-col cols="2">
-            <v-select :items="placeCert" label="Место аттестации" required></v-select>
+            <v-select
+                :items="placeCert"
+                label="Место аттестации"
+                required
+                variant="underlined"
+                density="compact"
+            ></v-select>
         </v-col>
     </v-row>
 
@@ -45,6 +74,8 @@
                     placeholder="Название или ИНН"
                     required
                     loading
+                    variant="underlined"
+                    density="compact"
                 >
                     <template v-slot:loader>
                         <v-progress-linear
@@ -71,26 +102,69 @@
     <v-expand-transition>
         <v-row v-show="!counterpart">
             <v-col cols="4">
-                <v-text-field class="mb-n6" label="Фамилия" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Фамилия"
+                    variant="underlined"
+                    density="compact"
+                required @click="test()"
+                ></v-text-field>
             </v-col>
 
             <v-col cols="4">
-                <v-text-field class="mb-n6" label="Имя" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Имя"
+                    required
+                    variant="underlined"
+                    density="compact"
+                    @click="test()"
+                ></v-text-field>
             </v-col>
             <v-col cols="4">
-                <v-text-field class="mb-n6" label="Отчество" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Отчество"
+                    variant="underlined"
+                    density="compact"
+                    required @click="test()"
+                ></v-text-field>
             </v-col>
             <v-col cols="12">
-                <v-text-field class="mb-n6" label="Место жительства" required @click="test()"></v-text-field>
+                <v-text-field
+                class="mb-n6"
+                    label="Место жительства"
+                    variant="underlined"
+                    density="compact"
+                    required @click="test()"
+                ></v-text-field>
             </v-col>
             <v-col cols="3">
-                <v-text-field class="mb-n6" label="Паспорт №" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Паспорт №"
+                    variant="underlined"
+                    density="compact"
+                    required @click="test()"
+                ></v-text-field>
             </v-col>
             <v-col cols="6">
-                <v-text-field class="mb-n6" label="Кем выдан" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Кем выдан"
+                    variant="underlined"
+                    density="compact"
+                    required @click="test()"
+                ></v-text-field>
             </v-col>
             <v-col cols="3">
-                <v-text-field class="mb-n6" label="Дата выдачи" required @click="test()"></v-text-field>
+                <v-text-field
+                    class="mb-n6"
+                    label="Дата выдачи"
+                    variant="underlined"
+                    density="compact"
+                    required @click="test()"
+                ></v-text-field>
             </v-col>
         </v-row>
     </v-expand-transition>
